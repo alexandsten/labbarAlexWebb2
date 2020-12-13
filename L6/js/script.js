@@ -72,7 +72,7 @@ function calculateCost() {
 // kontrollera och ändra innehållet i ort textfält
 function checkCity() {
 	let city = this.value;
-	city = city.toUpperCase();
+	city = city.toUpperCase();  		// bokstäver kommer göras stora
 	this.value = city; 
 }
 // slut på checkCity
@@ -103,8 +103,8 @@ function startCheckCampaign() {
 }
 // end check campaign
 function endCheckCampaign() {
-	this.style.backgroundColor = "";
-    this.value = this.value.toUpperCase();
+	this.style.backgroundColor = "";			//tidigare bakgrundsfärg kommer att tas bort
+    this.value = this.value.toUpperCase(); 		//bokstäver kommer att bli stora
 }
 // check campaign - kolla om koden stämmer
 function checkCampaign() {

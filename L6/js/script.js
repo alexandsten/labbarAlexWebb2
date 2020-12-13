@@ -41,13 +41,13 @@ function checkIfFamilyRoom() {  			// om familjerum är inbockad sker detta
 		formElem.persons.parentNode.style.color = "#000"; 
 		formElem.extra[2].disabled = true; // sjöutsikt
 		formElem.extra[2].parentNode.style.color = "#999"; // gör sjöutsikt grå
-		formElem.extra[2].checked = false;
+		formElem.extra[2].checked = false; 
 	}
 else { 										// om familjerum ej är inbockad sker detta
 		formElem.persons.disabled = true;
-		formElem.persons.parentNode.style.color = "#999"; //label grå
-		formElem.extra[2].disabled = false; // sjöutsikt
-		formElem.extra[2].parentNode.style.color = "#000"; // färg svart
+		formElem.persons.parentNode.style.color = "#999";
+		formElem.extra[2].disabled = false; // sjöutsikt ej disabled
+		formElem.extra[2].parentNode.style.color = "#000"; // text blir svart
 	}
 }
 

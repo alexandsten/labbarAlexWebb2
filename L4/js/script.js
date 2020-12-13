@@ -141,13 +141,13 @@ function moveBackToList(word) { // word är det ord som ska flyttas tillbaks
 // ------------------------------
 // Kontrollera användarens svar och visa de korrekta svaren
 function checkAnswers() {
-			for (let i = 0; i < answerElems.length; i++) {
+			for (let i = 0; i < answerElems.length; i++) { 		// kolla så att ord på på plats innan rättning
 			if (answerElems[i].innerHTML == "") {
 			alert("Dra först ord till alla bilder!!");
 			return; }
 	  } 
 	 
-	for (let i = 0; i < wordElems.length; i++) {
+	for (let i = 0; i < wordElems.length; i++) { 		// när rättning påbörjas är dessa element ej dragbara
 		wordElems[i].draggable = false;
 		wordElems[i].removeEventListener("dragstart",dragstartWord);
 		wordElems[i].removeEventListener("dragend",dragendWord);
@@ -160,10 +160,10 @@ function checkAnswers() {
 	let points = 0;
 	for (let i = 0; i < answerElems.length; i++) {
 		ix = imgElems[i].id;
-		if (answerElems[i].innerHTML == allWords[ix])
-		points++;
-		correctElems[i].innerHTML = "Rätt svar " + allWords[ix] + " " + allDescriptions[ix];
+		if (answerElems[i].innerHTML == allWords[ix])			// om ordet stämmer överens med svaret 
+		points++;												// öka poäng
+		correctElems[i].innerHTML = "Rätt svar " + allWords[ix] + " " + allDescriptions[ix]; // skriver ut rät svar och kort beskrivning 
 	}		
-	msgElem.innerHTML = "Du fick " + points + " poäng";
+	msgElem.innerHTML = "Du fick " + points + " poäng"; // meddelande med poäng
 } // End checkAnswers
 // ------------------------------

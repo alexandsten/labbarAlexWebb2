@@ -37,9 +37,9 @@ window.addEventListener("load",init);
 // kontrollera om familjerum är valt och ändra tillgänglighet till andra val
 function checkIfFamilyRoom() {  			// om familjerum är inbockad sker detta
 	if (formElem.roomType[2].checked) {  
-		formElem.persons.disabled = false;
+		formElem.persons.disabled = false;  	// antal personer tillgänglig
 		formElem.persons.parentNode.style.color = "#000"; 
-		formElem.extra[2].disabled = true; // sjöutsikt
+		formElem.extra[2].disabled = true; // sjöutsikt blir disabled
 		formElem.extra[2].parentNode.style.color = "#999"; // gör sjöutsikt grå
 		formElem.extra[2].checked = false; 
 	}

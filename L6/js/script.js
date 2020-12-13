@@ -47,7 +47,7 @@ else { 										// om familjerum ej är inbockad sker detta
 		formElem.persons.disabled = true;
 		formElem.persons.parentNode.style.color = "#999"; //label grå
 		formElem.extra[2].disabled = false; // sjöutsikt
-		formElem.extra[2].parentNode.style.color = "000"; // färg svart
+		formElem.extra[2].parentNode.style.color = "#000"; // färg svart
 	}
 }
 

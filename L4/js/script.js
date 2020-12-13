@@ -141,11 +141,12 @@ function moveBackToList(word) { // word är det ord som ska flyttas tillbaks
 // ------------------------------
 // Kontrollera användarens svar och visa de korrekta svaren
 function checkAnswers() {
-			for (let i = 0; i < answerElems.length; i++) { 		// kolla så att ord på på plats innan rättning
-			if (answerElems[i].innerHTML == "") {
+		for (let i = 0; i < answerElems.length; i++) { 		// kolla så att ord på på plats innan rättning
+		if (answerElems[i].innerHTML == "") {
 			alert("Dra först ord till alla bilder!!");
-			return; }
-	  } 
+			return; 
+		}
+	} 
 	 
 	for (let i = 0; i < wordElems.length; i++) { 		// när rättning påbörjas är dessa element ej dragbara
 		wordElems[i].draggable = false;

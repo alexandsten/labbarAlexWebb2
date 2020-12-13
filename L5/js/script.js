@@ -137,10 +137,10 @@ function newPig() {
 		pigElem.style.left = x + "px";
 		pigElem.style.top = y + "px";
 		pigElem.src = "img/pig.png";				// ge grisen rätt gris bild
-		pigElem.style.visibility = "visible";							// gör grisen synlig
+		pigElem.style.visibility = "visible";					// gör grisen synlig
 		pigTimerRef = setTimeout(newPig,pigDuration);
 	}
-	else {															// om det har dykt upp 10 grisar - stoppa spelet
+	else {				// om det har dykt upp 10 grisar - stoppa spelet
 		stopGame();
 	}
 }
@@ -149,7 +149,7 @@ function checkHit() {
 	if (catchedPig == true){				// om denna gris redan blivit påkörd - return
 		return;
 	} 
-	let cSize = carElem.offsetWidth;									// arean för kollision för gris och bil
+	let cSize = carElem.offsetWidth;						// arean för kollision för gris och bil
 	let pSize = pigElem.offsetWidth; 
 	let cL =  parseInt(carElem.style.left);
 	let cT =  parseInt(carElem.style.top);
@@ -159,8 +159,8 @@ function checkHit() {
 		clearTimeout(pigTimerRef);
 		pigElem.src = "img/smack.png";			// byt bild på gris till överkörd gris bild *smack*
 		pigTimerRef = setTimeout(newPig,pigDuration);
-		hitCounter++;													// öka siffran för överkörd gris
+		hitCounter++;											// öka siffran för överkörd gris
 		hitCounterElem.innerHTML = hitCounter;
-		catchedPig = true;												// denna gris har blivit påkörd
+		catchedPig = true;										// denna gris har blivit påkörd
 	}
 }

@@ -35,19 +35,19 @@ function init() {
 window.addEventListener("load",init);
 // ------------------------------
 // kontrollera om familjerum är valt och ändra tillgänglighet till andra val
-function checkIfFamilyRoom() {
-	if (formElem.roomType[2].checked) {
+function checkIfFamilyRoom() {  			// om familjerum är inbockad sker detta
+	if (formElem.roomType[2].checked) {  
 		formElem.persons.disabled = false;
-		formElem.persons.parentNode.style.color = "#000"; //label svart
+		formElem.persons.parentNode.style.color = "#000"; 
 		formElem.extra[2].disabled = true; // sjöutsikt
-		formElem.extra[2].parentNode.style.color = "#999"; // sjöutsikt grå
+		formElem.extra[2].parentNode.style.color = "#999"; // gör sjöutsikt grå
 		formElem.extra[2].checked = false;
 	}
-else {
+else { 										// om familjerum ej är inbockad sker detta
 		formElem.persons.disabled = true;
 		formElem.persons.parentNode.style.color = "#999"; //label grå
 		formElem.extra[2].disabled = false; // sjöutsikt
-		formElem.extra[2].parentNode.style.color = "000"; // svart
+		formElem.extra[2].parentNode.style.color = "000"; // färg svart
 	}
 }
 
@@ -79,7 +79,7 @@ function checkCity() {
 // kontrollera innehåll i fieldElem, index används till reguljärt uttryck och felmeddelande
 function checkField() {
 	const fieldNames = ["zipcode","telephone"];
-	const re = [  // array med reguljära uttryck för fälten
+	const re = [  // array med reguljära uttryck för fälten, som skall fyllas i korrekt
 		/^\d{3} ?\d{2}$/,
 		/^\d{1,3}[-/ ]?\d{5.8}$/
 	];
@@ -110,6 +110,6 @@ function endCheckCampaign() {
 function checkCampaign() {
 	const re = 			// kampanj kod bokstäver och siffor
 		/^[a-z]{3}-\d{2}-[a-z]\d$/i;
-		if (re.test(this.value)) this.style.backgroundColor = "#6F9"; 
-		else this.style.backgroundColor = "#F99";
+		if (re.test(this.value)) this.style.backgroundColor = "#6F9";  	// blir grön om kod stämmer överens
+		else this.style.backgroundColor = "#F99"; 				// annars blir koden röd
 }

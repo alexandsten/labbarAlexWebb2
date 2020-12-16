@@ -95,7 +95,7 @@ function moveCar() {				// funktion för att bilen ska röra sig
 	let yLimit = boardElem.offsetHeight - carElem.offsetHeight;		// bilens höjd
 	let x = parseInt(carElem.style.left);	// x-koordinat (left) för bilen
 	let y = parseInt(carElem.style.top);	// y-koordinat (top) för bilen
-	switch (carDir) {
+	switch (carDir) {	// riktningar
 		case 0: // Uppåt
 			y -= yStep;
 			if (y < 0) y = 0;

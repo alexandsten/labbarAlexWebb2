@@ -140,7 +140,7 @@ function newPig() {					// funktion för ny gris
 		stopGame();
 	}
 }
-//---------------- funktion för påkörd gris ----------------//
+//======== funktion för påkörd gris ========//
 function checkHit() {
 	if (catchedPig == true){		// om denna gris redan blivit påkörd - return
 		return;

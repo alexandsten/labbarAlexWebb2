@@ -97,14 +97,14 @@ function dragstartWord(e) { // e är Event-objektet
 } // End dragstartWord
 // ------------------------------
 // Drag-händelsen avslutas. Ta bort händelsehanterare på drop zones
-	function dragendWord() {
-		for (let i = 0; i < imgElems.length; i++) {
-			imgElems[i].removeEventListener("dragover",wordOverImg);
-			imgElems[i].removeEventListener("drop",wordOverImg);
-		}
-		wordListElem.removeEventListener("dragover",wordOverList);
-		wordListElem.removeEventListener("drop",wordOverList);
-		dragWordElem = this;
+function dragendWord() {
+	for (let i = 0; i < imgElems.length; i++) {
+		imgElems[i].removeEventListener("dragover",wordOverImg);
+		imgElems[i].removeEventListener("drop",wordOverImg);
+	}
+	wordListElem.removeEventListener("dragover",wordOverList);
+	wordListElem.removeEventListener("drop",wordOverList);
+	dragWordElem = this;
 } // End dragendWord
 // ------------------------------
 // Hantera händelserna dragover och drop, då ett ord släpps över en bild

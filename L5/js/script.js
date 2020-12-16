@@ -22,7 +22,7 @@ var catchedPig;				// påkörd gris händelse
 // ------------------------------
 // Initiera globala variabler och koppla funktion till knapp
 function init() {
-// Referenser till element i gränssnittet
+	// Referenser till element i gränssnittet
 	boardElem = document.getElementById("board");
 	carElem = document.getElementById("car");
 	startBtn = document.getElementById("startBtn");
@@ -45,7 +45,7 @@ window.addEventListener("load",init);
 // ------------------------------
 // Kontrollera tangenter och styr bilen
 function checkKey(e) {
-	let k = e.key;			// knapp
+	let k = e.key;			// tangentknapp
 	switch (k) {
 		case "ArrowLeft":	// händelse för vänster knapp
 		case "z":
@@ -69,8 +69,8 @@ function startGame() {
 	carElem.style.left = "0px";				// 	bilens start position - vänster
 	carElem.style.top = "0px";				//	bilens start position - top
 	carDir = 1;								// bilens riktning
-	carElem.src = "img/" + carImgs[carDir];			// 
-	moveCar();
+	carElem.src = "img/" + carImgs[carDir];			// bilens bild
+	moveCar();								// anropa att bilen ska röra på sig
 	/* === Tillägg i labben === */
 	pigTimerRef = setTimeout(newPig,pigDuration);		// grisens intervall att dyka upp
 	pigNr = 0;						// sätter antalet grisar som dykt upp till 0

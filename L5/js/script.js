@@ -22,23 +22,23 @@ var catchedPig;				// påkörd gris händelse
 // ------------------------------
 // Initiera globala variabler och koppla funktion till knapp
 function init() {
-	// Referenser till element i gränssnittet
-		boardElem = document.getElementById("board");
-		carElem = document.getElementById("car");
-		startBtn = document.getElementById("startBtn");
-		stopBtn = document.getElementById("stopBtn");
+// Referenser till element i gränssnittet
+	boardElem = document.getElementById("board");
+	carElem = document.getElementById("car");
+	startBtn = document.getElementById("startBtn");
+	stopBtn = document.getElementById("stopBtn");
 	// Lägg på händelsehanterare
-		document.addEventListener("keydown",checkKey);
-			// Känna av om användaren trycker på tangenter för att styra bilen
-		startBtn.addEventListener("click",startGame);
-		stopBtn.addEventListener("click",stopGame);
+	document.addEventListener("keydown",checkKey);
+	// Känna av om användaren trycker på tangenter för att styra bilen
+	startBtn.addEventListener("click",startGame);
+	stopBtn.addEventListener("click",stopGame);
 	// Aktivera/inaktivera knappar
-		startBtn.disabled = false;
-		stopBtn.disabled = true;
+	startBtn.disabled = false;
+	stopBtn.disabled = true;
 	/* === Tillägg i labben === */
-		pigElem = document.getElementById("pig");					// grisen som skall köras på
-		pigNrElem = document.getElementById("pigNr");				// siffra för antalet gris som dykt upp
-		hitCounterElem = document.getElementById("hitCounter");		// siffra för antalet gris som kört över
+	pigElem = document.getElementById("pig");					// grisen som skall köras på
+	pigNrElem = document.getElementById("pigNr");				// siffra för antalet gris som dykt upp
+	hitCounterElem = document.getElementById("hitCounter");		// siffra för antalet gris som kört över
 
 } // End init
 window.addEventListener("load",init);

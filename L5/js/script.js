@@ -120,9 +120,7 @@ function moveCar() {
 	checkHit();				// om grisen körts över
 } // End moveCar
 // ------------------------------
-
 /* === Tillägg av nya funktioner i labben === */
-
 function newPig() {					// ny gris
 	if (pigNr<10) {							// om färre än 10 grisar dykt upp
 		catchedPig = false;							// om grisen inte blivit påkörd

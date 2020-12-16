@@ -91,8 +91,8 @@ function stopGame() {			// Stoppa spelet
 // ------------------------------
 // Flytta bilen ett steg framåt i bilens riktning
 function moveCar() {
-	let xLimit = boardElem.offsetWidth - carElem.offsetWidth;		// bilens omkrets - bredd
-	let yLimit = boardElem.offsetHeight - carElem.offsetHeight;		// bilens omkrets - höjd
+	let xLimit = boardElem.offsetWidth - carElem.offsetWidth;		// bilens bredd
+	let yLimit = boardElem.offsetHeight - carElem.offsetHeight;		// bilens höjd
 	let x = parseInt(carElem.style.left);	// x-koordinat (left) för bilen
 	let y = parseInt(carElem.style.top);	// y-koordinat (top) för bilen
 	switch (carDir) {
@@ -113,9 +113,9 @@ function moveCar() {
 			if (x < 0) x = 0;
 			break;
 	}
-	carElem.style.left = x + "px";
-	carElem.style.top = y + "px";
-	timerRef = setTimeout(moveCar,timerStep);
+	carElem.style.left = x + "px";				// 
+	carElem.style.top = y + "px";				// 
+	timerRef = setTimeout(moveCar,timerStep);	// 
 	/* === Tillägg i labben === */
 	checkHit();				// om grisen körts över
 } // End moveCar

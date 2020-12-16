@@ -19,22 +19,22 @@ var dragWordElem;		// Det ord som dras (kan vara både li och p)
 // Initiering av globala variabler samt händelsehanterare.
 function init() {
 	// Referenser till element i gränssnittet
-		startGameBtn = document.getElementById("startGameBtn");
-		checkAnswersBtn = document.getElementById("checkAnswersBtn");
-		wordListElem = document.getElementById("wordList").getElementsByTagName("ul")[0];
-		wordElems = document.getElementById("wordList").getElementsByTagName("li");
-		imgElems = document.getElementById("imgList").getElementsByTagName("img");
-		answerElems = document.getElementsByClassName("userAnswer");
-		correctElems = document.getElementsByClassName("correctAnswer");
-		largeImgElem = document.getElementById("largeImg");
-		msgElem = document.getElementById("message");
+	startGameBtn = document.getElementById("startGameBtn");
+	checkAnswersBtn = document.getElementById("checkAnswersBtn");
+	wordListElem = document.getElementById("wordList").getElementsByTagName("ul")[0];
+	wordElems = document.getElementById("wordList").getElementsByTagName("li");
+	imgElems = document.getElementById("imgList").getElementsByTagName("img");
+	answerElems = document.getElementsByClassName("userAnswer");
+	correctElems = document.getElementsByClassName("correctAnswer");
+	largeImgElem = document.getElementById("largeImg");
+	msgElem = document.getElementById("message");
 	// Lägg på händelsehanterare
-		startGameBtn.addEventListener("click",startGame);
-		checkAnswersBtn.addEventListener("click",checkAnswers);
-		for (i= 0; i < imgElems.length; i++) {
-			imgElems[i].addEventListener("mouseenter",showLargeImg);
-			imgElems[i].addEventListener("mouseleave",hideLargeImg);
-		}
+	startGameBtn.addEventListener("click",startGame);
+	checkAnswersBtn.addEventListener("click",checkAnswers);
+	for (i= 0; i < imgElems.length; i++) {
+		imgElems[i].addEventListener("mouseenter",showLargeImg);
+		imgElems[i].addEventListener("mouseleave",hideLargeImg);
+	}
 	// Aktivera/inaktivera knappar
 		
 } // End init
@@ -142,11 +142,11 @@ function moveBackToList(word) { // word är det ord som ska flyttas tillbaks
 // Kontrollera användarens svar och visa de korrekta svaren
 function checkAnswers() {
 	for (let i = 0; i < answerElems.length; i++) { 		// kolla så att ord på på plats innan rättning
-	if (answerElems[i].innerHTML == "") {
-		alert("Dra först ord till alla bilder!!");
-		return; 
-	}
-} 
+		if (answerElems[i].innerHTML == "") {
+			alert("Dra först ord till alla bilder!!");
+			return; 
+		}
+	} 
 	 
 	for (let i = 0; i < wordElems.length; i++) { 		// när rättning påbörjas är dessa element ej dragbara
 		wordElems[i].draggable = false;

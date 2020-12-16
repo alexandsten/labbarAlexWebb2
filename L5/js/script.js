@@ -121,20 +121,20 @@ function moveCar() {
 } // End moveCar
 // ------------------------------
 /* === Tillägg av nya funktioner i labben === */
-function newPig() {					// ny gris
+function newPig() {					// funktion för ny gris
 	if (pigNr<10) {							// om färre än 10 grisar dykt upp
 		catchedPig = false;							// om grisen inte blivit påkörd
 		pigNr++;									// öka nummret grisar som dykt upp
-		pigNrElem.innerHTML = pigNr;
-		let xLimit = boardElem.offsetWidth - pigElem.offsetWidth-20;
-		let yLimit = boardElem.offsetHeight - pigElem.offsetHeight-20;
+		pigNrElem.innerHTML = pigNr;				// visa antalet grisar
+		let xLimit = boardElem.offsetWidth - pigElem.offsetWidth-20;  	// grisens bredd
+		let yLimit = boardElem.offsetHeight - pigElem.offsetHeight-20; 	// grisens höjd
 		let x = Math.floor(xLimit * Math.random()) + 10;
 		let y = Math.floor(yLimit * Math.random()) + 10;
 		pigElem.style.left = x + "px";
 		pigElem.style.top = y + "px";
 		pigElem.src = "img/pig.png";				// ge grisen rätt gris bild
 		pigElem.style.visibility = "visible";					// gör grisen synlig
-		pigTimerRef = setTimeout(newPig,pigDuration);
+		pigTimerRef = setTimeout(newPig,pigDuration);			// ny duration för grisar
 	}
 	else {				// om det har dykt upp 10 grisar - stoppa spelet
 		stopGame();

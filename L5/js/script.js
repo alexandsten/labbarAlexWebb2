@@ -51,7 +51,7 @@ function checkKey(e) {
 		case "z":
 			carDir--; // Bilens riktning 90 grader åt vänster
 			if (carDir < 0) carDir = 3;
-			carElem.src = "img/" + carImgs[carDir];
+			carElem.src = "img/" + carImgs[carDir];		// byt bilens riktnings bild
 			break;
 		case "ArrowRight": // händelse för höger knapp
 		case "-":
@@ -80,14 +80,13 @@ function startGame() {
 	catchedPig = true;				// om grisen kört över eller ej, startar på true
 } // End startGame
 // ------------------------------
-// Stoppa spelet
-function stopGame() {
-	if (timerRef != null) clearTimeout(timerRef);
+function stopGame() {			// Stoppa spelet
+	if (timerRef != null) clearTimeout(timerRef);		// om timern ej är aktiv
 	startBtn.disabled = false;
 	stopBtn.disabled = true;
 	/* === Tillägg i labben === */
 	if (pigTimerRef != null) clearTimeout(pigTimerRef);		// avslutas spelet dyker grisen ej upp längre
-	pigElem.style.visibility = "hidden";
+	pigElem.style.visibility = "hidden";					// göm grisen
 } // End stopGame
 // ------------------------------
 // Flytta bilen ett steg framåt i bilens riktning

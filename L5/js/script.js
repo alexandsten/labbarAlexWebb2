@@ -113,9 +113,9 @@ function moveCar() {				// funktion för att bilen ska röra sig
 			if (x < 0) x = 0;
 			break;
 	}
-	carElem.style.left = x + "px";				// 
-	carElem.style.top = y + "px";				// 
-	timerRef = setTimeout(moveCar,timerStep);	// 
+	carElem.style.left = x + "px";				// bilens rörelse
+	carElem.style.top = y + "px";				
+	timerRef = setTimeout(moveCar,timerStep);	
 	/* === Tillägg i labben === */
 	checkHit();				// om grisen körts över
 } // End moveCar

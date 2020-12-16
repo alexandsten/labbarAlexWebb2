@@ -1,6 +1,6 @@
 // Globala konstanter och variabler
 var boardElem;			// Referens till div-element för "spelplanen"
-const carImgs = ["car_up.png","car_right.png","car_down.png","car_left.png"];
+const carImgs = ["car_up.png","car_right.png","car_down.png","car_left.png"]; 	
 						// Array med filnamn för bilderna med bilen
 var carDir = 1;			// Riktning för bilen, index till carImgs
 var carElem;			// Referens till img-element för bilen
@@ -33,8 +33,8 @@ function init() {
 	startBtn.addEventListener("click",startGame);
 	stopBtn.addEventListener("click",stopGame);
 	// Aktivera/inaktivera knappar
-	startBtn.disabled = false;
-	stopBtn.disabled = true;
+	startBtn.disabled = false;							// om startknappen är avvaktiverad - falskt
+	stopBtn.disabled = true;							// om startknappen är avvaktiverad - falskt
 	/* === Tillägg i labben === */
 	pigElem = document.getElementById("pig");					// grisen som skall köras på
 	pigNrElem = document.getElementById("pigNr");				// siffra för antalet gris som dykt upp
@@ -45,15 +45,15 @@ window.addEventListener("load",init);
 // ------------------------------
 // Kontrollera tangenter och styr bilen
 function checkKey(e) {
-	let k = e.key;
+	let k = e.key;			// knapp
 	switch (k) {
-		case "ArrowLeft":
+		case "ArrowLeft":	// händelse för vänster knapp
 		case "z":
 			carDir--; // Bilens riktning 90 grader åt vänster
 			if (carDir < 0) carDir = 3;
 			carElem.src = "img/" + carImgs[carDir];
 			break;
-		case "ArrowRight":
+		case "ArrowRight": // händelse för höger knapp
 		case "-":
 			carDir++; // Bilens riktning 90 grader åt höger
 			if (carDir > 3) carDir = 0;

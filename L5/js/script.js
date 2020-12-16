@@ -123,7 +123,7 @@ function moveCar() {
 
 /* === Tillägg av nya funktioner i labben === */
 
-function newPig() {	
+function newPig() {					// ny gris
 	if (pigNr<10) {							// om färre än 10 grisar dykt upp
 		catchedPig = false;							// om grisen inte blivit påkörd
 		pigNr++;									// öka nummret grisar som dykt upp

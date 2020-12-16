@@ -119,7 +119,6 @@ function moveCar() {
 	timerRef = setTimeout(moveCar,timerStep);
 	/* === Tillägg i labben === */
 	checkHit();				// om grisen körts över
-
 } // End moveCar
 // ------------------------------
 

@@ -64,12 +64,12 @@ function checkKey(e) {
 // ------------------------------
 // Initiera spelet och starta bilens rörelse
 function startGame() {
-	startBtn.disabled = true;
-	stopBtn.disabled = false;
-	carElem.style.left = "0px";
-	carElem.style.top = "0px";
-	carDir = 1;
-	carElem.src = "img/" + carImgs[carDir];
+	startBtn.disabled = true;				// start game knappen blir avaktiverad
+	stopBtn.disabled = false;				// stop game knappen är ej avaktiverad
+	carElem.style.left = "0px";				// 	bilens start position - vänster
+	carElem.style.top = "0px";				//	bilens start position - top
+	carDir = 1;								// bilens riktning
+	carElem.src = "img/" + carImgs[carDir];			// 
 	moveCar();
 	/* === Tillägg i labben === */
 	pigTimerRef = setTimeout(newPig,pigDuration);		// grisens intervall att dyka upp

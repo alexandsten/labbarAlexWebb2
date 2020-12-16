@@ -90,7 +90,7 @@ function stopGame() {			// Stoppa spelet
 } // End stopGame
 // ------------------------------
 // Flytta bilen ett steg framåt i bilens riktning
-function moveCar() {
+function moveCar() {				// funktion för att bilen ska röra sig
 	let xLimit = boardElem.offsetWidth - carElem.offsetWidth;		// bilens bredd
 	let yLimit = boardElem.offsetHeight - carElem.offsetHeight;		// bilens höjd
 	let x = parseInt(carElem.style.left);	// x-koordinat (left) för bilen
